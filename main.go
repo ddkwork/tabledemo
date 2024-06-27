@@ -9,6 +9,6 @@ import (
 
 func main() {
 	app.Run("tabledemo", func(w *unison.Window) {
-		tabledemo.New().Layout(w.Content())
+		w.Content().AddChild(tabledemo.New().Layout())
 	})
 }
